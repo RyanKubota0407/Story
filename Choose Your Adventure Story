@@ -1,0 +1,162 @@
+//variables
+int introChoice, middleChoice1, middleChoice2, middleChoice3;
+string_t guard1, guard2;
+
+//6 functions
+void intro(){
+    printf("Once upon a time, in a prison cell in Texas there was 2 guards.\n");
+    printf("Both were nervous since it was their first day.\n");
+    printf("They got there first shift which was guarding a cell.\n");
+    printf("The prisoner noticed the two new new guards and asked for their names.\n");
+    printf("The prisoner said... What are you new guys names?\n");
+    printf("The guards replied... ");
+    scanf("%s", &guard1);
+    printf("and ");
+    scanf("%s",&guard2);
+    printf("The prisoner then said... Well I got an offer for both of you... \n");
+    printf("$1,000 dollars for both of you if you let me go. \n");
+    printf("You can either 1)Take the Bribe  2)Report him   or 3)Kill him");
+    scanf("%i", &introChoice);
+    while(introChoice != 1 && introChoice != 2 && introChoice != 3){
+        printf("That is not a choice. Please choose '1', '2', or '3'\n");
+        scanf("%i", &introChoice);
+    }
+}
+void middle1(){
+    printf("We chose the bribe. We waited until our night shift\n\
+            and opened the prisoner cell. As promised the prisoner gave them both 1,000\n\
+            dollars he hid under his bed. the prisoner left and now they were $1,000 richer.\n\
+            With all the money you and your fellow guard, both of you wanted to make a decision\n\
+            with the money.");
+            printf("Make your end choice: 1)Go on vacation, 2)Shopping Spree, or 3)Donate all to Charity\n");
+            scanf("%i", &middleChoice1);
+}   
+void middle2(){
+    printf("We reported him for bribing. Our boss thanked us for doing the right thing\n\
+            The prisoner looked at us with a mean face right when he was being arrested.\n\
+            He said.. You guys will pay for this. As the prisoner walks away our boss \n\
+            pulled us aside and wanted to talk to us. He said due to us doing the right thing \n\
+            we could 1)Get a promotion 2)Get a raise $ 3)Free Lunch for a Week\n");
+            scanf("%i", &middleChoice2);
+}
+void middle3(){
+    printf("After we heard his bribe we got mad. In our minds we thought he was trying to be all \n\
+            smarty since he knows we are new to the job. We didn't allow this. We opened the cell door \n\
+            and double teammed him. We attacked at the the same time knocking him out. Then we choked him \n\
+            until he died. Our guard noticed straight away and reported us. We had to think fast.. \n\
+            1)Go to jail  2)Go on the run   3)Kill yourselves\n");
+            
+            scanf("%i", &middleChoice3);
+}
+void end1a(){
+    printf("With our 2k we have together we decided to go on a vacation.\n\
+            They booked a ticket to Hawaii and got a five star hotel. They did many activites\n\
+            like swim with dolphins, full body massages, and eat at a 5 star resurant. They both\n\
+            enjoyed there time and had a great vacation. It was there final day and they got their\n\
+            plane ticket back to Texas.");
+    exit (1);
+}
+void end1b(){
+    printf("With the money we decided to go on a shopping spree at at the mall.\n\
+            The guards were able to buy plenty of stuff like shoes, clothes, jewlery, \n\
+            and electronics. They both made sure to get things for their families. \n\
+            They were able to get food and get matching outfits. After the entire day \n\
+            they had plenty of stuff and had a great time spending time together.");
+    exit (1);
+    
+}
+void end1c(){
+    printf("With the money we decided that our people would benefit more off this money.\n\
+            They decided to donate the money and split it between 5 organizations.\n\
+            The first organization was the army, the second was a homeless shelter, \n\
+            the third was a food drive, another was a animal shelter, and the final \n\
+            organization is hospital drive. After donatating all their money they got \n\
+            an award from their community. In addition to their rewards they got their pictures \n\
+            on their town hall.");
+    exit (1);
+}
+void end2a(){
+    printf("Since we did the right thing we decided we wanted to get a promotion. Our boss agreed \n\
+            and we went from a regular guard to senior guards. With us gettimng promoted we got new \n\
+            assignments and we got new uniforms. Both guards told their families the good news and \n\
+            the families went to a resurant and ate dinner together. After the dinner they went to get \n\
+            ice cream.");
+    exit (1);
+
+}
+void end2b(){
+    printf("We wanted to get a raise for our good job. Our boss agreed to our offer. Do to the raise \n\
+            we went from 3k a month to 5k. With all the extra money we were able to afford more. \n\
+            They went to a bar and celebrated there raise with food and drinks.");
+    exit (1);
+
+}
+void end2c(){
+    printf("We chose free lunch for a week. Today we got McDonalds with a slushy. The boss also asked us \n\
+            to decided what we want for the rest of the week. We said Chick Fil A on Tuesday, steak with potatoes \n\
+            on Wednesday, ramen on Thursday, and chipotle on Friday. That week we always were filled and full \n\
+            of energy. The week was basically the best week of there lives.");
+    exit (1);
+
+}
+void end3a(){
+    printf("We chose to go to jail. We knew we didn't do the right thing and that it wasn't \n\
+            worth trying to out run the guards. We put our hands up and got arrested. We faced \n\
+            our charges and was guilty. We had to spend the rest of our lives in jail.");
+    exit (1);
+}
+void end3b(){
+    printf("We decided to run. We jumped out of the window and stole a car. We took the car and \n\
+            drove away. We drove and drove until we ran out of gas. We ended up in a middle of a desert \n\
+            with nothing. They stayed at the dry lonely desert until they died to starvation. \n\
+            A week later there bodies were found and they were given a funeral.");
+    exit (1);
+}
+void end3c(){
+    printf("You chose option 3. The guards decided it was not worth living for what they done.\n\
+            they went to highest floor dodging all the guards trying to arrest them. When they finally \n\
+            reached the highest floor they jumped. No one could handle that high of a jump...");
+    exit (1);
+}
+    int main(){  //main program to run (logic)
+    intro();
+    if(1 == introChoice){
+        middle1();
+        if(middleChoice1 == 1){
+            end1a();
+        }
+        if(middleChoice1 == 2){
+            end1b();
+        }
+        if(middleChoice1 == 3){
+            end1c();
+        }
+        
+    }
+    if(2 == introChoice){
+    middle2();
+        if(middleChoice2 == 1){
+        end2a();
+        }
+        if(middleChoice2 == 2){
+        end2b();
+        }
+        if(middleChoice2 == 3){
+        end2c();
+        }
+
+    }
+    if(3 == introChoice){
+        middle3();
+        if(middleChoice3 == 1){
+            end3a();
+        }
+        if(middleChoice3 == 2){
+            end3b();
+        }
+        if(middleChoice3 == 3){
+            end3c();
+        }
+        
+    }
+}
